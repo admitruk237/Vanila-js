@@ -9,6 +9,17 @@
     <title>Vanila-js</title>
   </head>
   <body>
-    <button>click me</button>
+    <button
+      id="my-button"
+      onclick="changeButtonText('my-button')"
+    >
+      click me
+    </button>
+    <script>
+      function changeButtonText(id) {
+        const myButton = document.getElementById(id);
+        myButton.innerHTML = "Hello from vanila JS";
+      }
+    </script>
   </body>
 </html>
