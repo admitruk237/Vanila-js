@@ -7,18 +7,30 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Vanila-js</title>
+    <style>
+      .app {
+        text-align: center;
+      }
+      .green-bnt {
+        color: white;
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
-    <button
-      id="my-button"
-      onclick="changeButtonText('my-button')"
-    >
-      click me
-    </button>
+    <div class="app">
+      <button
+        id="my-button"
+        onclick="changeButton('my-button')"
+      >
+        click me
+      </button>
+    </div>
     <script>
-      function changeButtonText(id) {
+      function changeButton(id) {
         const myButton = document.getElementById(id);
         myButton.innerHTML = "Hello from vanila JS";
+        myButton.className = "green-bnt";
       }
     </script>
   </body>
